@@ -5,9 +5,9 @@ if (window.location.href.indexOf('www.google.com') > -1) {
 
   function walk(node) {
     var child, next;
-    if (node.nodeName.toLowerCase() === 'nav' || node.nodeName.toLowerCase() === 'table' || 
-    node.nodeName.toLowerCase() === 'svg' || node.nodeName.toLowerCase() === 'code' || node.nodeName.toLowerCase() === 'button') {
-  return;  // Skip walking through navigation, tables, SVGs, and code nodes.
+    // Skip walking through navigation, tables, SVGs, and code nodes.
+    if (node.nodeName.toLowerCase() === 'nav' || node.nodeName.toLowerCase() === 'table' || node.nodeName.toLowerCase() === 'svg' || node.nodeName.toLowerCase() === 'code' || node.nodeName.toLowerCase() === 'button') {
+  return; 
     }
     switch (node.nodeType) {
       case 1:
